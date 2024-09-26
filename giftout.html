@@ -15,39 +15,268 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md shadow-sm navbar-light">
+    <nav class="navbar navbar-expand-lg shadow-sm navbar-light">
         <div class="container"><a class="navbar-brand" href="index.html"><img src="assets/img/Humanity%20Logo.jpg" width="50em" height="50em">HUMANITY</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"></li>
-                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="giftout.html">Gift Out</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    
                 </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item"></li>
-                    <li class="nav-item"><a class="nav-link" href="giftout.html">Gift Out</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item"></li>
-                    <li class="nav-item"></li>
-                    <li class="nav-item"></li>
-                </ul>
+                               
             </div>
         </div>
     </nav>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-12">
-                <div data-reflow-type="product" data-bss-dynamic-product="" data-bss-dynamic-product-param="product" data-reflow-shoppingcart-url="cart.html"></div>
+
+    <div class="simple-slider">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"
+                    style="background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;) center center / cover no-repeat;">
+                    <img src="assets/img/crysis3-11-guide4games.com-.jpg">
+                </div>
+                <div class="swiper-slide"
+                    style="background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;) center center / cover no-repeat;">
+                </div>
+                <div class="swiper-slide"
+                    style="background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;) center center / cover no-repeat;">
+                </div>
             </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </div>
+
+    <!-- STARTING OF PAGE -->
+    <div class="container mt-5 ">
+        <div class="row pt-4">
+            <div class="p display-6 text-center">Please provide details of what you wish to give out</div>
+        </div>
+
+
+
+        <div class="row mt-5">
+            <div class="col-8 gx-5 ps-5 ms-5">
+                <form>
+                    <!-- ITEM CATEGORY -->
+                    <label for="chooseItem" class="form-label fw-semibold fs-5">Item Category</label>
+
+                    <select class="form-select mb-3" aria-label="Default select example">
+                        <option selected disabled>Choose Item</option>
+                        <option value="1">Clothes</option>
+                        <option value="2">Home Appliances</option>
+                        <option value="3">Electronics</option>
+                        <option value="4">Furniture</option>
+                        <option value="5">Construction tools</option>
+                        <option value="6">Books</option>
+                        <option value="7">Learning Materials</option>
+                    </select>
+
+                    <!-- ITEM PICTURE -->
+
+                    <label for="uploadImage" class="form-label fw-semibold fs-5 mt-3">Upload Images of Items</label>      
+                    <div class="row">
+                        <div class="col-6">
+                            <div>
+                                <div class="d-flex justify-content-start mb-4">
+                                    <img id="selectedAvatar"
+                                        src="assets/img/girlpic.jpg"
+                                        class="rounded-circle" style="width: 200px; height: 200px; object-fit: cover;"
+                                        alt="example placeholder" />
+                                </div>
+                                <div class="d-flex justify-content-start mb-4">
+                                    <div data-mdb-ripple-init class="btn btn-primary btn-rounded">
+                                        <label class="form-label text-white m-1" for="customFile2">Choose file</label>
+                                        <input type="file" class="form-control d-none" id="customFile2"
+                                            onchange="displaySelectedImage(event, 'selectedAvatar')" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div>
+                                <div class="d-flex justify-content-start mb-4">
+                                    <img id="selectedAvatar"
+                                        src="assets/img/girlpic.jpg"
+                                        class="rounded-circle" style="width: 200px; height: 200px; object-fit: cover;"
+                                        alt="example placeholder" />
+                                </div>
+                                <div class="d-flex justify-content-start mb-4">
+                                    <div data-mdb-ripple-init class="btn btn-primary btn-rounded">
+                                        <label class="form-label text-white m-1" for="customFile2">Choose file</label>
+                                        <input type="file" class="form-control d-none" id="customFile2"
+                                            onchange="displaySelectedImage(event, 'selectedAvatar')" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                   
+
+
+                    <!-- ITEM NAME -->
+                    <div class="mb-4">
+                        <label for="itemName" class="form-label fw-semibold fs-5">Item Name</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="exampleFormControlTextarea1" class="form-label fw-semibold fs-5">Item
+                            Desciption</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="location" class="form-label fw-semibold fs-5">Your Location</label>
+                        <select class="form-select mb-4" aria-label="Default select example">
+                            <option selected disabled>Choose Location in Koforidua</option>
+                            <option value="1">Jumapo</option>
+                            <option value="2">Suhyen</option>
+                            <option value="3">Okrase</option>
+                            <option value="4">Okrase</option>
+                            <option value="5">Poly Junction</option>
+                            <option value="6">Mile 50</option>
+                            <option value="7">Jackson Park</option>
+                        </select>
+                    </div>
+
+
+                    <label for="yearsused" class="form-label fw-semibold fs-5">Item's Number of Years</label>
+                    <select class="form-select mb-4" aria-label="Default select example">
+                        <option selected disabled>Choose Number of Years Used </option>
+                        <option value="1">1 - 5 Years</option>
+                        <option value="2">6 - 19 Years</option>
+                        <option value="3">Above 11 Years</option>
+                    </select>
+
+                    <div class="mb-4">
+                        <label for="itemName" class="form-label fw-semibold fs-5">Mobile Phone Number</label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-4">
+                        <label for="itemName" class="form-label fw-semibold fs-5">Email Address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+
+                    <!-- ADD ITEM BUTTTON -->
+                    <button type="submit" class="btn btn-primary text-end float-end">Give Out</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!--  -->
+    </div>
+    
+        
+            <!-- Remove the container if you want to extend the Footer to full width. -->
+
+    <!-- Footer -->
+    
+    <!-- Footer -->
+  
+
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdn.reflowhq.com/v1/toolkit.min.js" data-reflow-project="267418190"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/Simple-Slider-swiper-bundle.min.js"></script>
     <script src="assets/js/Simple-Slider.js"></script>
-</body>
 
+</body>
+<footer class="text-center text-white" style="background-color: #3f51b5">
+    <!-- Grid container -->
+    <div class="container">
+      <!-- Section: Links -->
+      <section class="mt-5">
+        <!-- Grid row-->
+        <div class="row text-center d-flex justify-content-center pt-5">
+          <!-- Grid column -->
+          <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="index.html" class="text-white text-decoration-none">Home</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="giftout.html" class="text-white text-decoration-none">Gift Out</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="profile.html" class="text-white text-decoration-none">Profile</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="about.html" class="text-white text-decoration-none">About</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+
+          
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row-->
+      </section>
+      <!-- Section: Links -->
+
+      <hr class="my-5" />
+
+      <!-- Section: Text -->
+      <section class="mb-5">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <p>
+              At HUMANITY, we pride ourselves as being the best Humanitariran institution
+              ensuring that everybody in <b>Koforidua </b> is a winner and blessing by sharing their extra or unused 
+              items to those in need.
+            </p>
+          </div>
+        </div>
+      </section>
+    
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div
+         class="text-center p-3"
+         style="background-color: rgba(0, 0, 0, 0.2)"
+         >
+      © 2024 Copyright:
+      <a class="text-white text-decoration-none" href="https://facebook.com/theokhay"
+         >humanity.com</a
+        >
+    </div>
+    <!-- Copyright -->
+  </footer>
+<script>
+    function displaySelectedImage(event, elementId) {
+    const selectedImage = document.getElementById(elementId);
+    const fileInput = event.target;
+
+    if (fileInput.files && fileInput.files[0]) {
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+            selectedImage.src = e.target.result;
+        };
+
+        reader.readAsDataURL(fileInput.files[0]);
+    }
+}
+</script>
 </html>
